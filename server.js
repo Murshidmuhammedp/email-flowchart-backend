@@ -11,7 +11,8 @@ const app = express()
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    // origin: "http://localhost:5173",
+    origin: "https://email-flowchart-frontend.vercel.app/",
     credentials: true
 }));
 
