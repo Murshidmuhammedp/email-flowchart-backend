@@ -8,7 +8,7 @@ import emailRoutes from './routes/flowRoutes.js'
 
 dotenv.config()
 const app = express()
-app.use(bodyParser.json());
+app.use(bodyParser.json()); 
 
 app.use(cors({
     // origin: "http://localhost:5173",
