@@ -1,9 +1,21 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
+import cors from 'cors'
+import bodyParser from 'body-parser'
+import emailRoutes from './routes/flowRoutes.js'
+
 
 dotenv.config()
 const app = express()
+app.use(bodyParser.json());
+
+app.use(cors({
+    origin: "http://localhost:5173",
+    credentials: true
+}));
+
+app.use('/api/emails', emailRoutes);
 
 mongoose.connect(process.env.DB)
     .then(() => console.log("Database Connected"))
