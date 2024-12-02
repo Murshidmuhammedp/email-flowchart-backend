@@ -1,5 +1,5 @@
 import Agenda from "agenda";
-import Flowcharts from "../Models/flowchartModel.js";
+import Flowcharts from "../models/flowchartModel.js";
 
 export const saveFlow = async (req, res) => {
     const { nodes, edges } = req.body;
